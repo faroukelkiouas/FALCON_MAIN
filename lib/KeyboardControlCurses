@@ -1,0 +1,65 @@
+import curses
+import Falcon
+import time
+
+# Get the curses window, turn off echoing of keyboard to screen, turn on
+# instant (no waiting) key response, and use special values for cursor keys
+screen = curses.initscr()
+curses.noecho() 
+curses.cbreak()
+screen.keypad(True)
+max_speed=100
+speed=40
+in1=17
+in2=22
+in3=23
+in4=24
+tm=0.3
+
+try:
+        while True:   
+            char = screen.getch()
+            if char == ord('q'):
+                break
+            elif char == curses.KEY_UP:
+                print("Forward")     
+                Falcon.Forward(speed)                     
+            elif char == curses.KEY_DOWN:
+                print("Backward")
+                Falcon.Backward(speed)               
+            elif char == curses.KEY_RIGHT:
+                print ("right")
+                Falcon.TurnRight(speed,max_speed)
+                Falcon.RightLight()
+            elif char == curses.KEY_LEFT:
+                print ("left")
+                Falcon.TurnLeft(speed,max_speed)
+                Falcon.LeftLight()
+            elif char == ord('f'):
+                Falcon.FrontLight()
+            elif char == ord('r'):
+                Falcon.RightLight()
+            elif char == ord('l'):
+                Falcon.LeftLight()
+            elif char == ord('s'):
+                Falcon.BackLight()
+                Falcon.Stop()
+            elif char == ord('x'):
+                Falcon.Cleanup()
+            elif char == ord('h'):
+                Falcon.ArmHoming()
+            elif char == ord('c'):
+                Falcon.ArmCameraStart()
+            elif char == ord('v'):
+                Falcon.ArmCameraDone()
+            elif char == ord('p'):
+                Falcon.PickStart()
+            elif char == ord('['):
+                Falcon.PickDone()
+            elif char == ord('z'):
+                Falcon.Zero()
+         
+finally:
+    #Close down curses properly, inc turn echo back on!
+    curses.nocbreak(); screen.keypad(0); curses.echo()
+    curses.endwin()

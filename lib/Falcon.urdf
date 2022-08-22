@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Falcon">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0405798930112094 -0.0994558060792431 0.11039699056158"
+        rpy="0 0 0" />
+      <mass
+        value="0.0680383193949221" />
+      <inertia
+        ixx="4.56628362161661E-05"
+        ixy="-2.9080076589394E-06"
+        ixz="5.21637358801365E-06"
+        iyy="5.74880963679846E-05"
+        iyz="6.21044121743977E-06"
+        izz="5.4676394906291E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.00012998 0.058589 0.0077691"
+        rpy="0 0 0" />
+      <mass
+        value="0.064395" />
+      <inertia
+        ixx="0.00010704"
+        ixy="-1.475E-09"
+        ixz="2.4067E-10"
+        iyy="9.11E-06"
+        iyz="2.396E-07"
+        izz="0.00011184" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0.2549 0.92157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0.027581 -0.097108 0.13356"
+      rpy="1.5708 -0.29596 -2.9618" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="2.78673627240045E-05 0.00453527360209256 0.00540885666033837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0502682596676605" />
+      <inertia
+        ixx="5.46009907455057E-05"
+        ixy="-6.95818537044897E-08"
+        ixz="-6.80278954103503E-11"
+        iyy="9.28672133698365E-06"
+        iyz="-2.87576347453487E-07"
+        izz="5.81490908796244E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.034164 0.12636 -0.0052"
+      rpy="3.1416 0 1.7476" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="4.60009634147274E-05 0.017841128422648 -0.00526460704778448"
+        rpy="0 0 0" />
+      <mass
+        value="0.0164994805828832" />
+      <inertia
+        ixx="3.91220854923708E-06"
+        ixy="1.15347978693966E-08"
+        ixz="-3.9916095609642E-09"
+        iyy="2.61246856957763E-06"
+        iyz="5.75784567895356E-07"
+        izz="5.02236605838147E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="-0.00030019 0.05685 0.0055433"
+      rpy="0 -0.0086598 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="4.60009634147274E-05 0.017841128422648 -0.00526460704778448"
+        rpy="0 0 0" />
+      <mass
+        value="0.0164994805828832" />
+      <inertia
+        ixx="3.91220854923708E-06"
+        ixy="1.15347978693966E-08"
+        ixz="-3.99160956096431E-09"
+        iyy="2.61246856957763E-06"
+        iyz="5.75784567895356E-07"
+        izz="5.02236605838147E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="end_effector">
+    <inertial>
+      <origin
+        xyz="0.0171399665259341 0.00183542808582049 -0.0118282957485124"
+        rpy="0 0 0" />
+      <mass
+        value="0.0349188641354432" />
+      <inertia
+        ixx="1.13565994410924E-05"
+        ixy="-3.50319996540532E-07"
+        ixz="-1.38624099406652E-06"
+        iyy="1.28546913344671E-05"
+        iyz="-1.36412991226788E-06"
+        izz="3.34262881836518E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/end_effector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Falcon/meshes/end_effector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="END_effector"
+    type="prismatic">
+    <origin
+      xyz="-0.056244 0.057777 -0.02935"
+      rpy="2.7966 -1.5708 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="end_effector" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="1"
+      upper="5"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

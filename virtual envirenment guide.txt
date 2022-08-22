@@ -1,0 +1,38 @@
+##To install the venv module for Python virtual environments, run this command:
+
+sudo apt-get install python3-venv
+##You only need to do this once for all future projects.
+
+##Step 5. Create a new Python project in a virtual environment
+##To create a new Python project in a virtual environment, run the following:
+
+cd ~
+python3 -m venv hello
+##This will create a new folder called hello that you should change to:
+
+cd ~/hello
+##List the folder contents:
+
+ls -ls
+##You should see a file called pyvenv.cfg.
+
+##Dump the contents of the file to the screen:
+
+cat pyvenv.cfg 
+##You should see a result like this (though your version my vary):
+
+home = /usr/bin
+include-system-site-packages = false
+version = 3.7.3
+##This indicates that version 3 of Python will be used.
+
+##The include-system-site-packages = false line indicates that this program will not use any external packages installed elswhere on your system. The idea is to create a program in an isolated environment. That way it can be run on other systems without having to worry about external dependencies.
+
+##Step 6. Activate the virtual enviroment
+##Switch to the hello folder and activate the virtual enviromnent:
+
+cd ~/hello
+source bin/activate
+##Your prompt should change to something like this (your user and hostname may be different):
+
+(hello) pi@pi4:~/hello $ 

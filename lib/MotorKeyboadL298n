@@ -1,0 +1,98 @@
+# Python Script
+# https://www.electronicshub.org/raspberry-pi-l298n-interface-tutorial-control-dc-motor-l298n-raspberry-pi/
+
+import RPi.GPIO as gpio         
+from time import sleep
+
+speed=100
+l=40
+m=60
+h=80
+
+en1=20
+en2=21
+in1=17
+in2=22
+in3=23
+in4=24
+
+temp1=1
+
+gpio.setmode(gpio.BCM)
+gpio.setup(in1, gpio.OUT)
+gpio.setup(in2, gpio.OUT)
+gpio.setup(in3, gpio.OUT)
+gpio.setup(in4, gpio.OUT)
+gpio.setup(en1,gpio.OUT)
+gpio.setup(en2,gpio.OUT)
+pwm1=gpio.PWM(en1,100)
+pwm2=gpio.PWM(en2,100)
+
+pwm1.start(speed)
+pwm2.start(speed)
+
+print("\n")
+print("The default speed & direction of motor is LOW & Forward.....")
+print("r-run s-stop f-forward b-backward l-low m-medium h-high e-exit")
+print("\n")    
+
+while(1):
+
+    x=input()
+    
+    if x=='s':
+        gpio.setmode(gpio.BCM)
+        gpio.output(in1, False)
+        gpio.output(in2, False)
+        gpio.output(in3, False)
+        gpio.output(in4, False)
+        gpio.cleanup()
+        x='z'
+
+    elif x=='f':
+        print("forward")
+        gpio.setmode(gpio.BCM)
+        gpio.output(in1, False)
+        gpio.output(in2, True)
+        gpio.output(in3, False)
+        gpio.output(in4, True)
+        temp1=1
+        x='z'
+
+    elif x=='b':
+        print("backward")
+        gpio.setmode(gpio.BCM)
+        gpio.output(in1, True)
+        gpio.output(in2, False)
+        gpio.output(in3, True)
+        gpio.output(in4, False)
+        temp1=0
+        x='z'
+
+    elif x=='l':
+        print("low")
+        pwm1.ChangeDutyCycle(l)
+        pwm2.ChangeDutyCycle(l)
+        x='z'
+
+    elif x=='m':
+        print("medium")
+        pwm1.ChangeDutyCycle(m)
+        pwm2.ChangeDutyCycle(m)
+        x='z'
+
+    elif x=='h':
+        print("high")
+        pwm1.ChangeDutyCycle(h)
+        pwm2.ChangeDutyCycle(h)
+        x='z'
+     
+    
+    elif x=='e':
+        GPIO.cleanup()
+        print("GPIO Clean up")
+        break
+    
+    else:
+        print("<<<  wrong data  >>>")
+        print("please enter the defined data to continue.....")

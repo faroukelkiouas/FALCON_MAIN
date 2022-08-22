@@ -1,0 +1,25 @@
+## username:
+whoami
+
+## IP address:
+ifconfig
+>>inet 169.254.45.163  netmask 255.255.0.0  broadcast 169.254.255.255
+
+## Rpi to Win:
+pscp -P 22 (pi username)@(pi IP address):(path to source file) "(Windows path to destination)"
+
+## Win to Rpi:
+pscp -P 22 "(Windows path to destination)" (pi username)@(pi IP address):(path to source file) 
+
+pscp -P 22 "C:\Users\hao\env\requirements.txt" pi@169.254.45.163:/home/pi/FALCON 
+
+## Create requiremnt.txt:
+pip freeze > requirements.txt
+
+## Install requiremnt.txt:
+pip install -r requirements.txt
+pip install -r "/home/pi/FALCON/requirements.txt"  
+
+
+
+
