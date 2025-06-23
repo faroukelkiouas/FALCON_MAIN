@@ -20,9 +20,9 @@ Welcome to **FALCON** – a smart and fully functional color-sorting robot equip
 
 ---
 
-## 📸 Project Demo
+## 📸 Falcon
 
-FALCON_MAIN/Falcon.jpeg
+https://github.com/user-attachments/assets/7ce7e35f-68ad-44f6-b921-a234618e8e1e
 
 
 ---
