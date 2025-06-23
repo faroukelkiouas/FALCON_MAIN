@@ -22,8 +22,7 @@ Welcome to **FALCON** – a smart and fully functional color-sorting robot equip
 
 ## 📸 Project Demo
 
-> _Insert GIF or image of your robot in action_  
-> You can upload demo.mp4 or GIFs in your repo’s assets and link them here.
+Falcon
 
 ---
 
