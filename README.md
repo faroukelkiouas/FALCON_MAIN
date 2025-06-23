@@ -1,5 +1,3 @@
-# FALCON_Multipurpose Robot
-
 # 🤖 FALCON – Color Sorting Robot
 
 <p align="center">
