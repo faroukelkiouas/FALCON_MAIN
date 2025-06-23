@@ -55,3 +55,19 @@ Welcome to **FALCON** – a smart and fully functional color-sorting robot equip
 
 ## 🔄 System Architecture
 
+[ Camera ] ---> [ Color Detection ] ---> [ Raspberry Pi ]
+|--> [ Arm IK + Motor Control ]
+|--> [ LEDs + Voice ]
+|--> [ Movement Logic ]
+
+
+---
+
+## 🧠 How It Works
+
+1. The camera detects the object’s color using the HSV color model.
+2. If color matches, robot navigates towards the object.
+3. Inverse Kinematics calculates joint angles.
+4. The robotic arm picks and places the object in the correct colored bin.
+5. The robot announces its action with voice feedback.
+
