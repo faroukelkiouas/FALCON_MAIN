@@ -6,7 +6,9 @@
 
 Welcome to **FALCON** – a smart and fully functional color-sorting robot equipped with a robotic arm and autonomous movement. It detects colored objects using OpenCV and sorts them precisely using inverse kinematics and servo motors. Built with Raspberry Pi, 3D-printed components, and a passion for automation!
 
-(Color_Sorting_Robot.pdf)
+## 📄 Project Report
+
+[Download the full FALCON Color Sorting Robot report (PDF)](./Color_Sorting_Robot.pdf)
 
 ---
 
